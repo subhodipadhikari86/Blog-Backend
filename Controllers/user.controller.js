@@ -5,9 +5,9 @@ import { LogInSchema, RegisterSchema } from "../Zod/Auth.js";
 import { v2 as cloudinary } from "cloudinary";
 import multer from "multer";
 cloudinary.config({
-  cloud_name: "dnwd3hnji",
-  api_key: "234883445182685",
-  api_secret: "-dTP6Uep99bN6n2uKUROnCRLv84",
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 // const storage = multer.diskStorage({
 //   destination:(req,file,cb)=>{
